@@ -3,19 +3,25 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33403.182
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataFirst", "DataFirst\DataFirst.csproj", "{1F631A8F-B74B-42B6-8E15-DA1DD7ABAFEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataFirst", "DataFirst\DataFirst.csproj", "{1F631A8F-B74B-42B6-8E15-DA1DD7ABAFEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirst", "CodeFirst\CodeFirst.csproj", "{0A6660B0-E754-47EA-BEB8-AF7C4509C2F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CodeFirst", "CodeFirst\CodeFirst.csproj", "{0A6660B0-E754-47EA-BEB8-AF7C4509C2F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabloAdiBelirleme", "TabloAdiBelirleme\TabloAdiBelirleme.csproj", "{AA96C774-F4E7-4EC8-ADA1-F7D700F91CDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TabloAdiBelirleme", "TabloAdiBelirleme\TabloAdiBelirleme.csproj", "{AA96C774-F4E7-4EC8-ADA1-F7D700F91CDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persisting_The_Data", "Persisting_The_Data\Persisting_The_Data.csproj", "{4E35B95C-D85D-497D-87A4-6732099CE47C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persisting_The_Data", "Persisting_The_Data\Persisting_The_Data.csproj", "{4E35B95C-D85D-497D-87A4-6732099CE47C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persisting_The_Data_Update", "Persisting_The_Data_Update\Persisting_The_Data_Update.csproj", "{EC4734AE-733E-441E-B4DA-DF1BBA2B6EA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persisting_The_Data_Update", "Persisting_The_Data_Update\Persisting_The_Data_Update.csproj", "{EC4734AE-733E-441E-B4DA-DF1BBA2B6EA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persisting_The_Data_Delete", "Persisting_The_Data_Delete\Persisting_The_Data_Delete.csproj", "{66A37F8D-A2EB-4AAE-8124-6042E845F133}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persisting_The_Data_Delete", "Persisting_The_Data_Delete\Persisting_The_Data_Delete.csproj", "{66A37F8D-A2EB-4AAE-8124-6042E845F133}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Querying", "Querying\Querying.csproj", "{B078AD1B-E29F-4F3F-A49C-EBCF7FCEDEA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Querying", "Querying\Querying.csproj", "{B078AD1B-E29F-4F3F-A49C-EBCF7FCEDEA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChangeTracker", "ChangeTracker\ChangeTracker.csproj", "{5A51BFF5-12B4-494F-8077-1179B9D1D61A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tracking", "Tracking\Tracking.csproj", "{0D18677F-5FF6-44A0-9451-E8168AC2718B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Relationships", "Relationships\Relationships.csproj", "{E0E1330C-8F53-45FF-A46E-139253866CDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,18 @@ Global
 		{B078AD1B-E29F-4F3F-A49C-EBCF7FCEDEA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B078AD1B-E29F-4F3F-A49C-EBCF7FCEDEA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B078AD1B-E29F-4F3F-A49C-EBCF7FCEDEA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A51BFF5-12B4-494F-8077-1179B9D1D61A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A51BFF5-12B4-494F-8077-1179B9D1D61A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A51BFF5-12B4-494F-8077-1179B9D1D61A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A51BFF5-12B4-494F-8077-1179B9D1D61A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D18677F-5FF6-44A0-9451-E8168AC2718B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D18677F-5FF6-44A0-9451-E8168AC2718B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D18677F-5FF6-44A0-9451-E8168AC2718B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D18677F-5FF6-44A0-9451-E8168AC2718B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0E1330C-8F53-45FF-A46E-139253866CDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0E1330C-8F53-45FF-A46E-139253866CDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0E1330C-8F53-45FF-A46E-139253866CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0E1330C-8F53-45FF-A46E-139253866CDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

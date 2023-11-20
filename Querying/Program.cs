@@ -293,38 +293,102 @@ var urun = await context.Urunler.FirstOrDefaultAsync(u => u.Id == 2323); //null 
 #endregion
 
 #region Sorgu Sonucu Dönüşüm Fonksiyonları
+//Bu fonksiyonlar ile sorgu neticesinden elde edilen verileri isteğimiz doğrultusunda
+//farklı türlere projecsiyon edebiliriz.
 
 #region ToDictionaryAsync
+//Sorgu neticesinde gelecek olan veriyi bir dictionary olarak elde etmek/tutmak/karşılaştırmak için kullanıılır.
 
+//var urunler = await context.Urunler.ToDictionaryAsync(u=>u.UrunAdi,u=>u.Fiyat);
+
+//ToList ile aynı amaca hizmet etmektedir.Yani, oluşturulan sorguyu execute edip neticesini anlar.
+//ToList : Gelen sorgu neticesinde enttiy türünde bir koleksiyon(List<TEntity>) dönüştürmekteyken,
+//ToDictionary ise : Gelen sorgu neticesini Dictionary türünden bir koleksiyona dönüştürücektir.
 #endregion
 
 #region ToArrayAsync
+//Oluşturulan sorguyu dizi olarak elde eder.
+//ToList ile muadil amaca hizmet eder. Yani sorguyu execute eder lakin sonucu
+//entity dizisi olarak elde eder.
 
+//var urunler = await context.Urunler.ToArrayAsync();
 #endregion
 
 #region Select
+//Select fonksiyonun işlevsel olarak birden fazla davranışı söz konusudur.
+//1. Select fonksiyonu,genarate edilecek sorgunun çekilecek kolonlarını ayarlamamızı sağlar.
+//var urunler = await context.Urunler.Select(u=> new Urun
+//{
+//    Id = u.Id,
+//    Fiyat = u.Fiyat,
+//}).ToListAsync();
+
+//2. Select fonksiyonu, gelen verileri farklı türlerde karşılaştırmamızı sağlar. T,anonim
+//var urunler = await context.Urunler.Select(u=> new
+//{
+//    Id = u.Id,
+//    Fiyat = u.Fiyat,
+//}).ToListAsync();
+
+
 
 #endregion
 
 #region SelectMany
+//Selectle aynı amaca hizmet eder lakin,ilişkisel tablolar neticesinde gelen verileri koleksiyonel verileri
+//tekelleştirip projeksiyon etmemizi sağlar.
 
+//var urunler = await context.Urunler.Include(u=>u.Parcalar).
+//    SelectMany(u=> u.Parcalar, (u,p)=> new
+//    {
+//        u.Id,
+//        u.Fiyat,
+//        p.ParcaAdi
+//    })
+
+//    .ToListAsync();
 #endregion
 
 #endregion
 
 #region GroupBy Fonksiyonu
+//Gruplama yapmamızı sağlayan fonksiyondur.
+#region Method Syntax
+//var datas = await context.Urunler.GroupBy(u => u.Fiyat).Select(group => new
+//{
+//    Count = group.Count(),
+//    Fiyat = group.Key
+//}).ToListAsync();
+#endregion
+#region Query Syntax
+//var datas = await(from urun in context.Urunler
+//            group urun by urun.Fiyat
+//            into @group
+//            select new
+//            {
 
+//                Fiyat = @group.Key,
+//                Count = @group.Count()
+//            }).ToListAsync();
+#endregion
 #endregion
 
 #region Foreach Fonksiyonu
+//Bir sorgulama fonksiyonu falan değildir!
+//Sorgulama neticesinde elde edilen kolekyisyonel veriler üzerinde iteresyonel olarak dönmemizi
+//ve teker teker verileri elde edip işlemler yapabilmemizi sağlayan bir fonksiyondur.foreach döngüsünün method.
+//foreach (var item in collection)
+//{
 
+//}
+//dataas.ForEach();
 #endregion
 
 public class ETicaretContext : DbContext
 {
-    public DbSet<Urun> Urunler { get; set; }
+    public DbSet<Urun>? Urunler { get; set; }
     public DbSet<Parca> Parcalar { get; set; }
-    public DbSet<UrunParca> UrunParca { get; set; }
+    public DbSet<UrunParca>? UrunParca { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
