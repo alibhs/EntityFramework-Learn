@@ -241,3 +241,4 @@ class ApplicationDbContext : DbContext
             .WithOne(p => p.Address)
             .HasForeignKey<Address>(a => a.Id);
     }
+}

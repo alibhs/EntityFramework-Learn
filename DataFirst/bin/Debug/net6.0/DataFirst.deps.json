@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "DataFirst/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.25",
           "Microsoft.EntityFrameworkCore.Design": "6.0.25",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.25",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.25"

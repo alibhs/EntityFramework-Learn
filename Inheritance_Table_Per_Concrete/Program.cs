@@ -61,10 +61,10 @@ class ApplicationDbContext : DbContext
         //modelBuilder.Entity<Employee>().ToTable("Employees");
         //modelBuilder.Entity<Customer>().ToTable("Customers");
         //modelBuilder.Entity<Technician>().ToTable("Technicians");
-        modelBuilder.Entity<Person>().UseTpcMappingStrategy();
+        //modelBuilder.Entity<Person>().UseTpcMappingStrategy();
     }
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Server=localhost, 1433;Database=ApplicationDB;User ID=SA;Password=1q2w3e4r+!;TrustServerCertificate=True");
+        //optionsBuilder.UseSqlServer("Server=localhost, 1433;Database=ApplicationDB;User ID=SA;Password=1q2w3e4r+!;TrustServerCertificate=True");
     }
 }
