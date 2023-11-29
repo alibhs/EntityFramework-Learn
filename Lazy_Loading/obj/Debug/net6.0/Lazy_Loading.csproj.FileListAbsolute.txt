@@ -57,3 +57,5 @@ C:\Users\Ali\Desktop\EntityFrameworkExamples\Solution1\Lazy_Loading\obj\Debug\ne
 C:\Users\Ali\Desktop\EntityFrameworkExamples\Solution1\Lazy_Loading\obj\Debug\net6.0\Lazy_Loading.pdb
 C:\Users\Ali\Desktop\EntityFrameworkExamples\Solution1\Lazy_Loading\obj\Debug\net6.0\Lazy_Loading.genruntimeconfig.cache
 C:\Users\Ali\Desktop\EntityFrameworkExamples\Solution1\Lazy_Loading\obj\Debug\net6.0\ref\Lazy_Loading.dll
+C:\Users\Ali\Desktop\EntityFrameworkExamples\Solution1\Lazy_Loading\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\Ali\Desktop\EntityFrameworkExamples\Solution1\Lazy_Loading\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Proxies.dll
